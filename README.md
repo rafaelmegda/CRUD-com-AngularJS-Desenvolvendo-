@@ -1,5 +1,9 @@
-# CRUD em AngularJS
+# Projeto de Desenvolvimento com AngularJS
 
-* Framework para componentes CSS usando materializeCSS
-Sâo componentes prontos para ser utilizado nas aplicações. 
-Importe para o projeto usando via CDN 
+Projeto ainda em desenvolvimento
+
+> MaterializeCSS
+https://materializecss.com/getting-started.html
+
+> AngularJS
+https://angularjs.org/
