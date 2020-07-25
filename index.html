@@ -11,34 +11,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body ng-controller="indexController">
-    <header>
-        <h2 ng-bind="titulo"></h2>
-        <table class="striped">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Email</th>
-                    <th>Nota 1</th>
-                    <th>Nota 2</th>
-                    <th>Nota 3</th>
-                    <th>Média</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="aluno in alunos">
-                    <td>{{aluno.Nome}}</td>
-                    <td>{{aluno.Email}}</td>
-                    <td>{{aluno.Nota}}</td>
-                    <td>{{aluno.Nota2}}</td>
-                    <td>{{aluno.Nota3}}</td>
-                    <td>{{media(aluno)}}</td>
-                </tr>
-            </tbody>
-        </table>
+<header class="container">
+    <h2 ng-bind="titulo"></h2>
+</header>
+<main class="container">
+    <div class="row">
+        <!-- (busca todos atributos) -->
+        <!-- <input type="text" ng-model="busca" placeholder="Busca">  -->
+        <!-- (busca somente pelo nome) -->
+        <input type="text" ng-model="busca.Nome" placeholder="Buscar nome"> 
+    </div>
 
-
-
-    </header>
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Média</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="aluno in alunos | filter: busca">
+                <td>{{aluno.Nome}}</td>
+                <td>{{aluno.Email}}</td>
+                <td>{{aluno.Nota}}</td>
+                <td>{{aluno.Nota2}}</td>
+                <td>{{aluno.Nota3}}</td>
+                <td>{{media(aluno)}}</td>
+            </tr>
+        </tbody>
+    </table>
+</main>
 
      <!--JavaScript at end of body for optimized loading-->
      <script type="text/javascript" src="js/materialize.min.js"></script>
