@@ -8,7 +8,32 @@
 </head>
 <body ng-controller="indexController">
     <header>
-        <h2>{{titulo}}</h2>
+        <h2 ng-bind="titulo"></h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Nota 3</th>
+                    <th>Média</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="aluno in alunos">
+                    <td>{{aluno.Nome}}</td>
+                    <td>{{aluno.Email}}</td>
+                    <td>{{aluno.Nota}}</td>
+                    <td>{{aluno.Nota2}}</td>
+                    <td>{{aluno.Nota3}}</td>
+                    <td>{{aluno.Media}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+
     </header>
 
     <script src="lib/angular/angular.min.js"></script>
@@ -16,6 +41,13 @@
         angular.module("meuModulo", [])
         .controller("indexController", function($scope){
             $scope.titulo = "Curso Sistema com AngularJS";
+
+            $scope.alunos = [
+                {Nome: "Rafael", Email: "rafael@mail.com", Nota: 89, Nota2: 68, Nota3: 81},
+                {Nome: "Camila", Email: "Camila@mail.com", Nota: 90, Nota2: 89, Nota3: 89},
+                {Nome: "Marcos", Email: "marcos@mail.com", Nota: 79, Nota2: 75, Nota3: 25},
+                {Nome: "Joao", Email: "joao@mail.com", Nota: 55, Nota2: 42, Nota3: 84}
+            ]
         })
     </script>
 </body>
