@@ -8,8 +8,6 @@ A ideia de criar um projeto utilizando o AngularJS é que existem muitos sistema
 
 ### Conteúdo utilizados
 
-> MaterializeCSS
-https://materializecss.com/getting-started.html
+* MaterializeCSS https://materializecss.com/getting-started.html
 
-> AngularJS
-https://angularjs.org/
+* AngularJS https://angularjs.org/
